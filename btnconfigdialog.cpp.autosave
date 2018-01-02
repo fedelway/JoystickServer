@@ -68,3 +68,8 @@ void BtnConfigDialog::keySequencePress()
 
     qDebug() << key;
 }
+
+void BtnConfigDialog::on_buttonBox_accepted()
+{
+    
+}
