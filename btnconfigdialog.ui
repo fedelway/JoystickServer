@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BtnConfigDialog</class>
+ <widget class="QDialog" name="BtnConfigDialog">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>412</width>
+    <height>305</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Joystick Configuration</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <layout class="QFormLayout" name="formLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="uPLabel">
+           <property name="text">
+            <string>UP</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="upLineEdit"/>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="bNT_DOWNLabel">
+           <property name="text">
+            <string>DOWN</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="downLineEdit"/>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="lEFTLabel">
+           <property name="text">
+            <string>LEFT</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="leftLineEdit"/>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="rIGHTLabel">
+           <property name="text">
+            <string>RIGHT</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QLineEdit" name="rightLineEdit"/>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="xLabel">
+           <property name="text">
+            <string>X</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QLineEdit" name="xLineEdit"/>
+         </item>
+         <item row="5" column="0">
+          <widget class="QLabel" name="oLabel">
+           <property name="text">
+            <string>O</string>
+           </property>
+          </widget>
+         </item>
+         <item row="5" column="1">
+          <widget class="QLineEdit" name="oLineEdit"/>
+         </item>
+         <item row="6" column="0">
+          <widget class="QLabel" name="tRIANGLELabel">
+           <property name="text">
+            <string>△</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="1">
+          <widget class="QLineEdit" name="triangleLineEdit"/>
+         </item>
+         <item row="7" column="0">
+          <widget class="QLabel" name="SqrLabel">
+           <property name="text">
+            <string>□</string>
+           </property>
+          </widget>
+         </item>
+         <item row="7" column="1">
+          <widget class="QLineEdit" name="sqrLineEdit"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item row="1" column="2">
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <layout class="QFormLayout" name="formLayout_4">
+       <item row="0" column="0">
+        <widget class="QLabel" name="l1Label">
+         <property name="text">
+          <string>L1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="l1LineEdit"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="l2Label">
+         <property name="text">
+          <string>L2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLineEdit" name="l2LineEdit"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="l3Label">
+         <property name="text">
+          <string>L3</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="l3LineEdit"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="r1Label">
+         <property name="text">
+          <string>R1</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="r1LineEdit"/>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="r2Label">
+         <property name="text">
+          <string>R2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLineEdit" name="r2LineEdit"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="r3Label">
+         <property name="text">
+          <string>R3</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="r3LineEdit"/>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="selectLabel">
+         <property name="text">
+          <string>Select</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLineEdit" name="selectLineEdit"/>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="startLabel">
+         <property name="text">
+          <string>Start</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QLineEdit" name="startLineEdit"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>BtnConfigDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>BtnConfigDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
