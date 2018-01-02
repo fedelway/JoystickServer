@@ -2,211 +2,285 @@
 <ui version="4.0">
  <class>BtnConfigDialog</class>
  <widget class="QDialog" name="BtnConfigDialog">
-  <property name="windowModality">
-   <enum>Qt::ApplicationModal</enum>
-  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>412</width>
-    <height>305</height>
+    <width>592</width>
+    <height>476</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Joystick Configuration</string>
+   <string>Button Configuration</string>
   </property>
-  <property name="modal">
-   <bool>true</bool>
-  </property>
-  <layout class="QGridLayout" name="gridLayout_2">
-   <item row="0" column="0">
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="0">
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <layout class="QFormLayout" name="formLayout">
-         <item row="0" column="0">
-          <widget class="QLabel" name="uPLabel">
-           <property name="text">
-            <string>UP</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QLineEdit" name="upLineEdit"/>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="bNT_DOWNLabel">
-           <property name="text">
-            <string>DOWN</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QLineEdit" name="downLineEdit"/>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="lEFTLabel">
-           <property name="text">
-            <string>LEFT</string>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1">
-          <widget class="QLineEdit" name="leftLineEdit"/>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="rIGHTLabel">
-           <property name="text">
-            <string>RIGHT</string>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="1">
-          <widget class="QLineEdit" name="rightLineEdit"/>
-         </item>
-         <item row="4" column="0">
-          <widget class="QLabel" name="xLabel">
-           <property name="text">
-            <string>X</string>
-           </property>
-          </widget>
-         </item>
-         <item row="4" column="1">
-          <widget class="QLineEdit" name="xLineEdit"/>
-         </item>
-         <item row="5" column="0">
-          <widget class="QLabel" name="oLabel">
-           <property name="text">
-            <string>O</string>
-           </property>
-          </widget>
-         </item>
-         <item row="5" column="1">
-          <widget class="QLineEdit" name="oLineEdit"/>
-         </item>
-         <item row="6" column="0">
-          <widget class="QLabel" name="tRIANGLELabel">
-           <property name="text">
-            <string>△</string>
-           </property>
-          </widget>
-         </item>
-         <item row="6" column="1">
-          <widget class="QLineEdit" name="triangleLineEdit"/>
-         </item>
-         <item row="7" column="0">
-          <widget class="QLabel" name="SqrLabel">
-           <property name="text">
-            <string>□</string>
-           </property>
-          </widget>
-         </item>
-         <item row="7" column="1">
-          <widget class="QLineEdit" name="sqrLineEdit"/>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </item>
-     <item row="1" column="2">
-      <widget class="QDialogButtonBox" name="buttonBox">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="standardButtons">
-        <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <layout class="QFormLayout" name="formLayout_4">
-       <item row="0" column="0">
-        <widget class="QLabel" name="l1Label">
-         <property name="text">
-          <string>L1</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLineEdit" name="l1LineEdit"/>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="l2Label">
-         <property name="text">
-          <string>L2</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="l2LineEdit"/>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="l3Label">
-         <property name="text">
-          <string>L3</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="l3LineEdit"/>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="r1Label">
-         <property name="text">
-          <string>R1</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QLineEdit" name="r1LineEdit"/>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="r2Label">
-         <property name="text">
-          <string>R2</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QLineEdit" name="r2LineEdit"/>
-       </item>
-       <item row="5" column="0">
-        <widget class="QLabel" name="r3Label">
-         <property name="text">
-          <string>R3</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="1">
-        <widget class="QLineEdit" name="r3LineEdit"/>
-       </item>
-       <item row="6" column="0">
-        <widget class="QLabel" name="selectLabel">
-         <property name="text">
-          <string>Select</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="1">
-        <widget class="QLineEdit" name="selectLineEdit"/>
-       </item>
-       <item row="7" column="0">
-        <widget class="QLabel" name="startLabel">
-         <property name="text">
-          <string>Start</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="1">
-        <widget class="QLineEdit" name="startLineEdit"/>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </item>
-  </layout>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>443</y>
+     <width>166</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>434</width>
+     <height>306</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="lblUp">
+        <property name="text">
+         <string>UP</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_2"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>DOWN</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_3"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_4"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_5">
+        <property name="text">
+         <string>LEFT</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_5"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_6">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_6"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>RIGHT</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_7"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_8"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>X</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_9"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_10">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_10"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <widget class="QLabel" name="label_11">
+        <property name="text">
+         <string>O</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_11"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_12">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_12"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_7">
+      <item>
+       <widget class="QLabel" name="label_13">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_13"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_14">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_14"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_15"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_15">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_16"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_9">
+      <item>
+       <widget class="QLabel" name="label_16">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_17"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_17">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_18"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_10">
+      <item>
+       <widget class="QLabel" name="label_18">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_19"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_19">
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QKeySequenceEdit" name="keySequenceEdit_20"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
  </widget>
  <resources/>
  <connections>

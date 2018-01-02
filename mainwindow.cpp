@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 
 #include <configuredialog.h>
+#include <btnconfigdialog.h>
 #include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -25,7 +26,9 @@ void MainWindow::on_btnConfigure_clicked()
 
 void MainWindow::on_btnConfigureJoystick_clicked()
 {
+    BtnConfigDialog dialog(this);
 
+    dialog.exec();
 }
 
 void MainWindow::on_btnClose_clicked()
