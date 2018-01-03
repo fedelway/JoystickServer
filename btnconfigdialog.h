@@ -25,6 +25,7 @@ private:
 
 private slots:
     void keySequencePress();
+    void on_buttonBox_accepted();
 };
 
 #endif // BTNCONFIGDIALOG_H

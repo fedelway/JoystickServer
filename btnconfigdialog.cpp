@@ -68,3 +68,13 @@ void BtnConfigDialog::keySequencePress()
 
     qDebug() << key;
 }
+
+void BtnConfigDialog::on_buttonBox_accepted()
+{
+    QMap<Joystick::Buttons,Qt::Key>::iterator i;
+    for(i=Config::Instance()->buttonToKeys.begin();i!=Config::Instance()->buttonToKeys.end();i++)
+    {
+        Config::Instance()->buttonToKeys.insert(i.key(),(Qt::Key)map.value(i.key())->keySequence()[0]);
+    }
+
+}

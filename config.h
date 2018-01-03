@@ -4,6 +4,7 @@
 #include <qglobal.h>
 #include <QMap>
 #include <joystickbuttons.h>
+#include <QXmlStreamReader>
 
 class Config
 {
@@ -12,6 +13,10 @@ private:
     //Singleton private constructor and instance
     Config();
     static Config* instance;
+
+    void setDefaults();
+    void readConfigXml();
+    void readKeyMappings(QXmlStreamReader*);
 
 public:
     static Config* Instance();

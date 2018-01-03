@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>298</width>
-    <height>176</height>
+    <height>187</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -141,30 +141,11 @@
      <x>0</x>
      <y>0</y>
      <width>298</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <widget class="QToolBar" name="toolBar">
-   <property name="windowTitle">
-    <string>toolBar</string>
-   </property>
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
