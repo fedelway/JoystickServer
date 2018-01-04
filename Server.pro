@@ -31,7 +31,9 @@ SOURCES += \
     config.cpp \
     server.cpp \
     client.cpp \
-    btnconfigdialog.cpp
+    btnconfigdialog.cpp \
+    windowskeypresser.cpp \
+    linuxkeypresser.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -41,9 +43,14 @@ HEADERS += \
     joystickbuttons.h \
     client.h \
     programprotocol.h \
-    btnconfigdialog.h
+    btnconfigdialog.h \
+    windowskeypresser.h \
+    keypresser.h \
+    linuxkeypresser.h
 
 FORMS += \
         mainwindow.ui \
     configuredialog.ui \
     btnconfigdialog.ui
+
+unix|win32: LIBS += -lUser32
