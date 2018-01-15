@@ -76,5 +76,4 @@ void BtnConfigDialog::on_buttonBox_accepted()
     {
         Config::Instance()->buttonToKeys.insert(i.key(),(Qt::Key)map.value(i.key())->keySequence()[0]);
     }
-
 }

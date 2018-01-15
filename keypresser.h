@@ -7,9 +7,9 @@ class KeyPresser
 {
 
 public:
-    KeyPresser();
-    void virtual sendKeyPress(Qt::Key,bool press);
-}
+    KeyPresser(){}
+    void virtual sendKeyPress(Qt::Key,bool press) = 0;
+};
 
 
 #endif // KEYPRESSER_H

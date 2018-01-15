@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <QAbstractSocket>
+#include <keypresser.h>
 
 class Client : public QObject
 {
@@ -13,6 +14,7 @@ public:
 
 private:
     QAbstractSocket* socket;
+    KeyPresser* presser;
 
 signals:
 

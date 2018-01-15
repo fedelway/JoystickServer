@@ -2,6 +2,8 @@
 
 #include <QFile>
 #include <QKeySequence>
+#include <QMessageBox>
+#include <QDir>
 
 Config* Config::instance;
 
@@ -10,6 +12,7 @@ Config::Config()
     port = 1060;
 
     this->setDefaults();
+    this->readConfigXml();
 }
 
 Config* Config::Instance()
@@ -43,12 +46,13 @@ void Config::setDefaults()
 
 void Config::readConfigXml()
 {
-    const QString fileName = "settings.xml";
+    //const QString fileName = QDir::currentPath() + "/settings.xml";
+    const QString fileName = "E:/FedericoP/Desktop/settings.xml";
 
     QFile xmlFile(fileName);
 
     if(!xmlFile.open(QIODevice::ReadOnly | QIODevice::Text)){
-        //No pudo abrir el archivo xml
+        this->showError("No se pudo abrir el archivo de configuración.",xmlFile.errorString());
         return;
     }
 
@@ -60,36 +64,52 @@ void Config::readConfigXml()
         QXmlStreamReader::TokenType token = reader.readNext();
         //If token is just StartDocument - go to next
         if(token == QXmlStreamReader::StartDocument) {
-                continue;
+            if(reader.name() != "Joystick"){
+                //this->showError("El xml no esta bien formateado.","");
+                //break;
+            }else continue;
         }
         //If token is StartElement - read it
         if(token == QXmlStreamReader::StartElement) {
             //If it is keyMappings continue
-            if(reader.name() == "keyMappings")
+            if(reader.name() == "KeyMappings")
             {
                 readKeyMappings(&reader);
             }
         }
     }
+
+    xmlFile.close();
 }
+
 
 void Config::readKeyMappings(QXmlStreamReader* reader)
 {
     QXmlStreamReader::TokenType token = reader->readNext();
 
-    while( !(token == QXmlStreamReader::EndElement && reader->name() == "keyMappings") )
+    while( !(token == QXmlStreamReader::EndElement && reader->name() == "KeyMappings") && !reader->hasError() )
     {
-        if(token == QXmlStreamReader::StartElement)
+        if(token == QXmlStreamReader::Characters)
         {
             int btn = Joystick::GetBtnFromString(reader->name().toString());
 
             if(btn != 0)
             {
-                QKeySequence seq(reader->readElementText());
-                buttonToKeys.insert((Joystick::Buttons)btn,(Qt::Key)seq.count());
+                QKeySequence seq(reader->readElementText().toUpper());
+                buttonToKeys.insert((Joystick::Buttons)btn,(Qt::Key)seq[0]);
             }
         }
 
         reader->readNext();
     }
+}
+
+void Config::showError(QString error, QString informative)
+{
+    QMessageBox box;
+
+    box.setText(error);
+    box.setInformativeText(informative);
+    box.setIcon(QMessageBox::Information);
+    box.exec();
 }
