@@ -33,6 +33,7 @@ private:
 
 private slots:
     void startNewClient();
+    void clientDeleted(QObject* client);
 };
 
 #endif // SERVER_H

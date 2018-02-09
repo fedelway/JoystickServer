@@ -8,8 +8,8 @@ class KeyPresser
 
 public:
     KeyPresser(){}
+    virtual ~KeyPresser(){}
     void virtual sendKeyPress(Qt::Key,bool press) = 0;
 };
-
 
 #endif // KEYPRESSER_H

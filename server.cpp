@@ -4,6 +4,7 @@
 #include <QTcpSocket>
 #include <QDebug>
 #include <QStringBuilder>
+#include <QNetworkInterface>
 
 Server* Server::instance;
 
@@ -36,6 +37,7 @@ void Server::startNewClient()
         QTcpSocket* newSocket = tcpServer->nextPendingConnection();
 
         Client* newClient = new Client(newSocket,this);
+        connect(newClient, &Client::destroyed, this, &Server::clientDeleted);
 
         this->clientList.append(newClient);
 
@@ -73,11 +75,27 @@ bool Server::isRunning()
 
 QString Server::serverInfo()
 {
-    QString address = "Address: " + tcpServer->serverAddress().toString();
+    //QString address = "Address: " + tcpServer->serverAddress().toString();
+    QString address = "Address: ";
+
+    foreach(const QHostAddress &addr, QNetworkInterface::allAddresses()){
+        if(addr.protocol() == QAbstractSocket::IPv4Protocol && !addr.isLoopback())
+            address.append(addr.toString());
+    }
+
     QString separator = "\n" + QString(address.length(),QChar('-')) + "\n";
     QString port = "Port: " + QString::number(tcpServer->serverPort(),10);
 
     return address +
            separator +
            port;
+}
+
+void Server::clientDeleted(QObject* obj)
+{
+    Client* client = static_cast<Client*>(obj);
+
+    //qDebug() << "CLIENT POINTER: " << client << "QOBJECT POINTER: " << obj;
+    //qDebug() << "REMOVE SUCCESS: " << clientList.removeOne(client);
+    //qDebug() << "CLIENT COUNT: " << clientList.size();
 }

@@ -10,6 +10,8 @@ class WindowsKeyPresser : public KeyPresser
 {
 public:
     WindowsKeyPresser();
+    ~WindowsKeyPresser();
+
     void sendKeyPress(Qt::Key,bool);
 };
 

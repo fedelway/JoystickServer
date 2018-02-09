@@ -6,8 +6,12 @@
 #include "windows.h"
 #include <QKeyEvent>
 
-
 WindowsKeyPresser::WindowsKeyPresser()
+{
+
+}
+
+WindowsKeyPresser::~WindowsKeyPresser()
 {
 
 }

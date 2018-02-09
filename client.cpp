@@ -13,6 +13,7 @@ Client::Client(QAbstractSocket *socket, QObject *parent) : QObject(parent)
     this->socket = socket;
 
     connect(socket, &QAbstractSocket::readyRead, this, &Client::dataArrived);
+    connect(socket, &QAbstractSocket::disconnected, this, &Client::onDisconnect);
 
 #if defined(Q_OS_WIN)
     presser = new WindowsKeyPresser();
@@ -79,4 +80,10 @@ void Client::dataArrived()
     qDebug() << QKeySequence(Config::Instance()->buttonToKeys.value((Joystick::Buttons)data.btn)).toString()
              << " "
              << QString::number(data.press);
+}
+
+void Client::onDisconnect()
+{
+    qDebug() << "DISCONNECT";
+    this->deleteLater();
 }

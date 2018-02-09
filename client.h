@@ -22,6 +22,7 @@ public slots:
 
 private slots:
     void dataArrived();
+    void onDisconnect();
 };
 
 #endif // CLIENT_H
