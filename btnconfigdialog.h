@@ -23,6 +23,8 @@ private:
     Ui::BtnConfigDialog *ui;
     QMap<Joystick::Buttons,QKeySequenceEdit*> map;
 
+    Qt::Key getKeyFromString(QString keyString);
+
 private slots:
     void keySequencePress();
     void on_buttonBox_accepted();

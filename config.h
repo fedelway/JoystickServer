@@ -17,6 +17,7 @@ private:
     void setDefaults();
     void readConfigXml();
     void readKeyMappings(QXmlStreamReader*);
+    void showError(QString error,QString informative);
 
 public:
     static Config* Instance();

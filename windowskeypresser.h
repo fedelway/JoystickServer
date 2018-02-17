@@ -6,10 +6,12 @@
 
 #ifdef Q_OS_WIN
 
-class WindowsKeyPresser : KeyPresser
+class WindowsKeyPresser : public KeyPresser
 {
 public:
     WindowsKeyPresser();
+    ~WindowsKeyPresser();
+
     void sendKeyPress(Qt::Key,bool);
 };
 

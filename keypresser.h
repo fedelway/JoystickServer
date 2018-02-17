@@ -5,9 +5,9 @@
 
 class KeyPresser
 {
-protected:
-    KeyPresser();
 public:
+    KeyPresser(){}
+    virtual ~KeyPresser(){}
     void virtual sendKeyPress(Qt::Key,bool press) = 0;
 };
 

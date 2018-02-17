@@ -59,6 +59,9 @@ void MainWindow::startServer()
     }else{
         ui->lblServerInfo->setText(Server::Instance()->serverInfo());
         ui->btnStartClose->setText("Stop Server");
+
+        //Deshabilito el boton de configurar puerto
+        ui->btnConfigure->setEnabled(false);
     }
 }
 
@@ -68,4 +71,7 @@ void MainWindow::stopServer()
 
     ui->lblServerInfo->setText("");
     ui->btnStartClose->setText("Start Server");
+
+    //Vuelvo a habilitar el boton de configurar puerto
+    ui->btnConfigure->setEnabled(true);
 }

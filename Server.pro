@@ -33,7 +33,8 @@ SOURCES += \
     client.cpp \
     btnconfigdialog.cpp \
     windowskeypresser.cpp \
-    linuxkeypresser.cpp
+    linuxkeypresser.cpp \
+    joystickbuttons.cpp
 
 HEADERS += \
         mainwindow.h \

@@ -66,7 +66,7 @@ void BtnConfigDialog::keySequencePress()
 
     int key = keySequenceEdit->keySequence()[0];
 
-    qDebug() << key;
+    qDebug() << key << " " << QKeySequence(keySequenceEdit->keySequence()[0]).toString();
 }
 
 void BtnConfigDialog::on_buttonBox_accepted()
@@ -74,7 +74,34 @@ void BtnConfigDialog::on_buttonBox_accepted()
     QMap<Joystick::Buttons,Qt::Key>::iterator i;
     for(i=Config::Instance()->buttonToKeys.begin();i!=Config::Instance()->buttonToKeys.end();i++)
     {
-        Config::Instance()->buttonToKeys.insert(i.key(),(Qt::Key)map.value(i.key())->keySequence()[0]);
-    }
+        //Armo una keySequence con la primer tecla que toco
+        QKeySequence keySequence(map.value(i.key())->keySequence()[0]);
+        //Hago un split con + para el caso de que tenga una tecla modificadora
+        QStringList list = keySequence.toString().split("+");
 
+        Qt::Key key = getKeyFromString(list[0]);
+
+        Config::Instance()->buttonToKeys.insert(i.key(),key);
+    }
+}
+
+Qt::Key BtnConfigDialog::getKeyFromString(QString keyString)
+{
+    if(keyString == "Ctrl")
+        return Qt::Key_Control;
+    else if(keyString == "Shift")
+        return Qt::Key_Shift;
+    else if(keyString == "Ins")
+        return Qt::Key_Insert;
+    else if(keyString == "Space")
+        return Qt::Key_Space;
+    else if(keyString == "Del")
+        return Qt::Key_Delete;
+    else if(keyString == "Return")
+        return Qt::Key_Return;
+    else if(keyString == "Alt")
+        return Qt::Key_Alt;
+    else if(keyString == "Backspace")
+        return Qt::Key_Backspace;
+    else return (Qt::Key)keyString[0].toLatin1();
 }
