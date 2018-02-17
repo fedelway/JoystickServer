@@ -5,11 +5,10 @@
 
 class KeyPresser
 {
-
-public:
+protected:
     KeyPresser();
-    void virtual sendKeyPress(Qt::Key,bool press);
-}
-
+public:
+    void virtual sendKeyPress(Qt::Key,bool press) = 0;
+};
 
 #endif // KEYPRESSER_H
